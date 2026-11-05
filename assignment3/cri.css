@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #1b263b;
+    --secondary-color: #415a77;
+    --accent-color: #ffb703;
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --table-border: #dee2e6;
+    --hover-bg: #e2eafc;
+    --striped-bg: #f1f5f9;
+    --cell-padding: 12px 16px;
+    --font-size: 14px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    font-size: var(--font-size);
+    text-align: left;
+    white-space: nowrap;
+}
+
+caption {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 16px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    caption-side: top;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+th, td {
+    padding: var(--cell-padding);
+    border: 1px solid var(--table-border);
+}
+
+thead th {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--striped-bg);
+}
+
+tbody tr:hover {
+    background-color: var(--hover-bg);
+    transition: background-color 0.2s ease-in-out;
+}
+
+tfoot td {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
